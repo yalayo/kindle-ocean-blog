@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "b" {
-  bucket = "kindle_ocean_blog"
+  bucket = "kindle-ocean-blog"
   acl    = "public-read"
   policy = file("policy.json")
 
