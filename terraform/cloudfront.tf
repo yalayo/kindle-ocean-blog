@@ -1,5 +1,5 @@
 locals {
-  s3_origin_id = "kindle_ocean_blog"
+  s3_origin_id = "kindle-ocean-blog"
 }
 
 resource "aws_cloudfront_origin_access_identity" "origin_id" {
