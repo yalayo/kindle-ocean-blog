@@ -1,5 +1,5 @@
 locals {
-  s3_origin_id = "s3-busqandote.com"
+  s3_origin_id = "kindle_ocean_blog"
 }
 
 resource "aws_cloudfront_origin_access_identity" "origin_id" {
@@ -21,7 +21,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   comment             = "Some comment"
   default_root_object = "index.html"
 
-  aliases = ["b2b.busqandote.com"]
+  aliases = ["blog.kindleocean.com"]
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
@@ -103,6 +103,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 # Load the certificate
 data "aws_acm_certificate" "c" {
-  domain   = "*.DOMAIN_HERE"
+  domain   = "*.kindleocean.com"
   statuses = ["ISSUED"]
 }

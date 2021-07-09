@@ -9,7 +9,7 @@
         "s3:GetObject"
       ],
       "Resource": [
-        "arn:aws:s3:::BUCKET_NAME_HERE/*"
+        "arn:aws:s3:::kindle_ocean_blog/*"
       ]
     }
   ]
